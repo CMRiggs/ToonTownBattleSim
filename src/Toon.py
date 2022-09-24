@@ -1,6 +1,6 @@
 class Toon:
-    def __init__(self, name, gags, laff):
+    def __init__(self, name, laff, gags):
         """Gags is always an array of 7 gag objects."""
         self.name = name
-        self.gags = gags
         self.laff = laff
+        self.gags = gags
