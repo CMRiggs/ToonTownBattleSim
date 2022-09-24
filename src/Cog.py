@@ -7,7 +7,9 @@ cogs = ["Flunky", "Pencil Pusher", "Yesman", "Micro-manager", "Downsizer", "Head
         "Short Change", "Penny Pincher", "Tightwad", "Bean Counter", "Number Cruncher", "Money Bags", "Loan Shark", "Robber Baron", #Cash bots
         "Cold Caller", "Tele-marketer", "Name Dropper", "Glad Hander", "Mover & Shaker", "Two-Face", "The Mingler", "Mr. Hollywood"] #Sell bots
 
-class Cog (ABC):
+# This will have to be abstract because every cog has individual attacks,
+# attack frequencies, and attack damages
+class Cog(ABC):
     def __init__(self, name, level):
         self.name = name
         for i,v in enumerate(cogs):
@@ -32,3 +34,14 @@ class Cog (ABC):
             self.maxHealth = (level + 1) * (level + 2)
         else:
             self.maxHealth = 196
+
+def getCogDefense(rank, level):
+    #For idx 3 and 4 the first number is used when the cog's rank is 1, second number otherwise
+    cogDefense = [-2, -5, -10, [-12, -15], [-15, -20], -25, -30, 35, -40, -45, -50, -55]
+    if (level == 4 or level == 5) and rank == 1:
+        if rank == 1:
+            return cogDefense[level - 1][0]
+        else:
+            return cogDefense[level - 1][1]
+    return cogDefense[level - 1]
+    
