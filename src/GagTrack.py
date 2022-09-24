@@ -1,6 +1,6 @@
 from abc import ABC
 
-class Gags(ABC):
+class GagTrack(ABC):
     def __init__(self, exp, expMilestones, damages, accuracy, target, type):
         """If gag track isn't owned set exp as -1"""
         self.exp = exp
@@ -10,7 +10,7 @@ class Gags(ABC):
         self.target = target
         self.type = type
 
-class ToonUp(Gags):
+class ToonUp(GagTrack):
     def __init__(self, exp, organic):
         if (organic == False):
             # Each array represents the min and max damage of a gag. The lowest level gag is index 0.
@@ -26,7 +26,7 @@ class ToonUp(Gags):
         toonUpExpMilestones = [0, 20, 200, 800, 2000, 6000, 10000]
         super().__init__(exp, toonUpExpMilestones, toonUpDamages, toonUpAccuracy, toonUpTargets, "Toon-Up")
 
-class Trap(Gags):
+class Trap(GagTrack):
     def __init__(self, exp, organic):
         if (organic == False):
             # Each array represents the min and max damage of a gag. The lowest level gag is index 0.
@@ -42,7 +42,7 @@ class Trap(Gags):
         super().__init__(exp, trapExpMilestones, trapDamages, trapAccuracy, trapTargets, "Trap")
     
 
-class Lure(Gags):
+class Lure(GagTrack):
     def __init__(self, exp, organic):
         if (organic == False):
             # Damage is set to the amount of rounds lure lasts
@@ -57,7 +57,7 @@ class Lure(Gags):
         super().__init__(exp, lureExpMilestones, lureDamages, lureAccuracy, lureTargets, "Lure")
     
 
-class Sound(Gags):
+class Sound(GagTrack):
     def __init__(self, exp, organic):
         if (organic == False):
             soundDamages = [[3,4],[5,7],[9,11],[14,16],[19,21],[25,50],[90,90]]
@@ -71,7 +71,7 @@ class Sound(Gags):
         super().__init__(exp, soundExpMilestones, soundDamages, soundAccuracy, soundTargets, "Sound")
     
 
-class Throw(Gags):
+class Throw(GagTrack):
     def __init__(self, exp, organic):
         if (organic == False):
             throwDamages = [[4,6],[8,10],[14,17],[24,27],[36,40],[48,100],[120,120]]
@@ -85,7 +85,7 @@ class Throw(Gags):
         super().__init__(exp, throwExpMilestones, throwDamages, throwAccuracy, throwTargets, "Throw")
     
 
-class Squirt(Gags):
+class Squirt(GagTrack):
     def __init__(self, exp, organic):
         if (organic == False):
             squirtDamages = [[3,4],[6,8],[10,12],[18,21],[27,30],[36,80],[105,105]]
@@ -99,7 +99,7 @@ class Squirt(Gags):
         super().__init__(exp, squirtExpMilestones, squirtDamages, squirtAccuracy, squirtTargets, "Squirt")
     
 
-class Drop(Gags):
+class Drop(GagTrack):
     def __init__(self, exp, organic):
         if (organic == False):
             dropDamages = [[10,10],[18,18],[30,30],[45,45],[60,70],[85,170],[180,180]]
