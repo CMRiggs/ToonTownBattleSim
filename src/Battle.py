@@ -1,5 +1,4 @@
 from math import floor, ceil
-from re import T
 
 from GagTrack import *
 from Cog import Cog, getCogDefense
@@ -141,5 +140,3 @@ def damageCalculation(gag, idx):
     #    bonus = 1
     #damage += bonus
     #return damage
-
-print(groupCogAccuracy([Cog("Flunky", 5), Cog("Robber Baron", 12)], [Sound(4578, False)], [5], 0))
