@@ -86,9 +86,11 @@ def groupCogAccuracy(cogs, gags, idxs, prevHits):
 
 def toonUpAccuracy(gag, idx):
     propAcc = gag.accuracy[idx]
-    for i,v in enumerate(gag.expMilestones):
-        if (v >= gag.exp):
-            trackExp = i*5
+    for i,v in reversed(list(enumerate(gag.expMilestones))):
+            if (v <= gag.exp):
+                trackExp = i*5
+                break
+    
     atkAcc = propAcc + trackExp
     if atkAcc > 95:
         return 95
