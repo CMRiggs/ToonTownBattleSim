@@ -31,4 +31,4 @@ class Cog (ABC):
         if level != 12:
             self.maxHealth = (level + 1) * (level + 2)
         else:
-            self.maxHealth = 200
+            self.maxHealth = 196
