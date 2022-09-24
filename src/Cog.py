@@ -34,6 +34,7 @@ class Cog(ABC):
             self.maxHealth = (level + 1) * (level + 2)
         else:
             self.maxHealth = 196
+        self.lured = False
 
 def getCogDefense(rank, level):
     #For idx 3 and 4 the first number is used when the cog's rank is 1, second number otherwise
