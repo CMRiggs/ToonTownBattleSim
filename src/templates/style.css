@@ -1,0 +1,83 @@
+body {
+    background-color: rgb(90, 170, 255);
+}
+
+p {
+    font-family: Arial;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    height: 250px;
+}
+
+.ttr-logo {
+    max-width: 500px;
+}
+
+.gag-track {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    border-radius: 5em/15em;
+}
+
+.gag-track-gags {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.gag-button {
+    background-color: #0887dc;
+    border: none;
+    width: 75px;
+    height: 90%;
+    border-radius: 20%;
+    margin-left: 3px;
+    margin-right: 3px;
+    box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.6), inset 0px 0px 2px 0px rgba(0, 0, 0, 0.3);
+    
+    cursor: pointer;
+}
+
+.gag-button:hover {
+    box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.6), inset 0px -2px 3px rgba(255, 255, 255, 0.5)
+}
+
+.gag-button:active {
+    box-shadow: inset 0px 0px 5px 2px rgb(0, 0, 0);
+}
+
+.gag-track-info {
+    height: 100%;
+    margin-right: 12px;
+}
+
+.gag-track-name {
+    font-size: 20px;
+    color: rgb(50, 50, 50);
+}
+
+.gag-track-xp {
+    height: 20px;
+    font-size: 18px;
+    width: 130px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.15);
+    border-style: solid;
+    border-color: rgba(50, 50, 50, 0.5);
+}
