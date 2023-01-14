@@ -6,6 +6,7 @@ p {
     font-family: Arial;
     margin-top: 0;
     margin-bottom: 0;
+    color: rgb(50, 50, 50);
 }
 
 .container {
@@ -22,6 +23,10 @@ p {
 
 .ttr-logo {
     max-width: 500px;
+}
+
+.gags {
+    margin-bottom: 16px;
 }
 
 .gag-track {
@@ -80,4 +85,88 @@ p {
     background: rgba(0, 0, 0, 0.15);
     border-style: solid;
     border-color: rgba(50, 50, 50, 0.5);
+}
+
+.toons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.toon {
+    text-align: center;
+}
+
+.toon-gag-pick {
+    background-color:#0887dc;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: solid;
+    border-color: rgba(50, 50, 50, 0.3);
+    border-width: 6px;
+    margin-bottom: 4px;
+    cursor: pointer;
+}
+
+.toon-gag-target {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.toon-laff {
+    font-size: 20px;
+}
+
+.toon-name {
+    font-size: 20px;
+}
+
+.cogs {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 16px;
+    background-color: rgb(150, 150, 150);
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 12px;
+}
+
+.cog {
+    display: flex;
+    align-items: center;
+    background-color: rgb(200, 200, 200);
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-style: solid;
+    border-color: rgb(100, 100, 100);
+    border-width: 4px;
+    border-radius: 12px;
+    max-width: 125px;
+}
+
+.cog-image {
+    width: 50px;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.cog-info {
+    text-align: center;
+}
+
+.cog-level {
+    text-align: center;
+    width: 60px;
+}
+
+.cog-health {
+    display: inline;
+    text-align: center;
+    width: 30px;
 }
